@@ -1,4 +1,4 @@
-# ecommerce-vuejs-hk
+# ecommerce-vuejs-hk > client-vue
 
 ## Project setup
 ```
