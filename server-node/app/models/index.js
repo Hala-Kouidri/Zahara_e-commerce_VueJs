@@ -3,8 +3,8 @@ const Sequelize = require('sequelize')
 const connex = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host:dbConfig.HOST,
   dialect: dbConfig.dialect,
-  // port: 3306,
-  port: 8889,
+  // port: 3306, // Pour Windows
+  port: 8889, // Pour Mac
   operatorAliases: false
 })
 const db = {}

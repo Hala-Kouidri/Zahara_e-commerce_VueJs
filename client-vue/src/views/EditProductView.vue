@@ -12,12 +12,10 @@
       </router-link>
     </div>
 
-    <!-- Formulaire d'ajout -->
-    <form className="add-form m-5">
+    <!-- Formulaire de modification -->
+    <form className="add-form m-5 was-validated" novalidate>
 
-      <!-- <div className="input-group mb-3"> -->
       <input className="form-control form-control-m m-3" type="text" placeholder="Nom" v-model="product.name" required />
-      <!-- <input className="form-control form-control-m m-3" type="text" placeholder="Catégorie" v-model="product.categorie" required /> -->
       <select
         class="form-control form-control-m m-3"
         placeholder=""
@@ -29,11 +27,8 @@
         <option class="option" value="Fleurs">Fleurs</option>
         <option class="option" value="Accessoirs">Accessoirs</option>
       </select>
-      <!-- </div> -->
-      <!-- <div className="input-group mb-3"> -->
       <input className="form-control form-control-m m-3" type="number" placeholder="Prix" v-model.number="product.price" required />
       <input className="form-control form-control-m m-3" type="text" placeholder="photo.jpeg" v-model="product.photo" required />
-      <!-- </div> -->
       <textarea className="form-control form-control-m m-3" placeholder="Description" v-model="product.description" required></textarea>
 
     </form>

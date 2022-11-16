@@ -3,8 +3,8 @@
     <SideBar />
     <router-view
       :inventory="inventory"
-      :addInventory = "addInventory"
-      :updateInventory = "updateInventory"
+      :addInventory ="addInventory"
+      :updateInventory ="updateInventory"
       :removeInventory="removeInventory" />
   </div>
 </template>
@@ -12,6 +12,8 @@
 <script>
 // @ is an alias to /src
 import 'bootstrap/js/dist/button'
+import 'bootstrap-validate/dist/bootstrap-validate'
+
 import SideBar from '@/components/Sidebar'
 import ProductDataService from '@/services/ProductDataService'
 

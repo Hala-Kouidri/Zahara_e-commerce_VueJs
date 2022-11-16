@@ -111,3 +111,11 @@
 .form-control:focus > option:hover {
   box-shadow: 0 0 10px 100px #1da818 inset;
 } */
+
+/* img */
+
+.presentation__img-container {
+  height: 320px;
+  object-fit: cover;
+  overflow: hidden;
+}

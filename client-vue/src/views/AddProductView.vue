@@ -13,17 +13,9 @@
     </div>
 
     <!-- Formulaire d'ajout -->
-    <form class="add-form m-5 needs-validation" novalidate>
+    <form class="add-form m-5 was-validated" novalidate>
 
-      <!-- TODO : VALIDATION -->
-      <!-- <div> -->
-        <input class="form-control form-control-m m-3" v-bind:class="{ 'is-invalid': nameError }" type="text"
-          placeholder="Nom" v-model="product.name" />
-        <!-- TODO : I NEED TO CHECK WHAT'S THE PROBLEM WITH THE VALIDATION -->
-        <div class="invalid-feedback">
-          Nom requis
-        </div>
-      <!-- </div> -->
+      <input class="form-control form-control-m m-3" type="text" placeholder="Nom" v-model="product.name" required/>
 
       <select class="form-control form-control-m m-3" placeholder="" v-model="product.categorie" required>
         <option class="option" value="" disabled>Catégorie</option>
@@ -49,17 +41,6 @@ export default {
   props: ['addInventory'],
   data () {
     return {
-      // TODO : VALIDATION
-      // https://codersdiaries.com/blog/vue-js-form-validation
-      nameError: false,
-      photoError: false,
-      priceError: false,
-      descriptionError: false,
-      categorieError: false,
-
-      // TODO : VALIDATION
-      errors: [],
-
       product: {
         name: '',
         photo: '',
@@ -70,14 +51,6 @@ export default {
     }
   },
   methods: {
-    // TODO : VALIDATION
-    validate () {
-      if (!this.name) {
-        this.nameError = true
-      } else {
-        document.getElementById('name').className = 'form-control is-valid'
-      }
-    },
     saveProduct () {
       ProductDataService.create(this.product)
         .then(response => {
